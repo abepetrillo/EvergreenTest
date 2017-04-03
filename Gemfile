@@ -39,9 +39,10 @@ gem 'jbuilder', '~> 2.5'
 gem 'sinatra', git: 'https://github.com/sinatra/sinatra.git'
 
 group :development, :test do
-  gem 'evergreen', github: 'abepetrillo/evergreen', require: 'evergreen/rails'
+  gem 'evergreen', :submodules => true, :git => 'git://github.com/abepetrillo/evergreen.git'
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
+  gem 'selenium-webdriver'
 end
 
 group :development do
